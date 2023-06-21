@@ -1,5 +1,6 @@
 # cybersecurity-projects
-self-study outside of classes for fun and practice :) \n
+self-study outside of classes for fun and practice :)
+
 (note to self: make GUI for both - or add to website)
 
 ## ideas
