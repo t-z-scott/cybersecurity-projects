@@ -1,7 +1,7 @@
 # cybersecurity-projects
 self-study outside of classes for fun and practice :)
 
-(note to self: make GUI - or add to website)
+(note to self: make GUI in python or turn on github sites)
 
 ---
 
