@@ -1,7 +1,8 @@
 
 /**
- * This is a keylogger. As long as it's running, it'll record the user's keystrokes.
- * @author taylu
+ * This is a keylogger. As long as it's running, it'll record the current user's keystrokes
+ * and print them to the console.
+ * @author t-z-scott
  */
 import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
