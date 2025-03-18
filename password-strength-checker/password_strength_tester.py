@@ -1,6 +1,7 @@
 """checker.py gives user-entered password a strength on a scale of 1-4 (weak=1, moderate=2, strong=3, very strong=4)."""
 
 import re
+import sys
 
 
 """check the user-entered password's validility
@@ -14,7 +15,7 @@ Returns:
 def check_pwd(pwd):
     # if pwd shorter than 12 letters, return 0
     if len(pwd) < 12:
-        return 0
+        return 0, 'Please enter a password that is at least 12 characters.\n'
     
     else:
         strength = 4         # password strength tracker int
@@ -41,12 +42,17 @@ def check_pwd(pwd):
             strength -= 1
             
         if feedback == '':
-            feedback == 'Great job!'
+            feedback = 'Great job!\n'
         
         return strength, feedback
     
     
-# main program
-password = input('Enter your password: ')
-score, str = check_pwd(password)
-print(f'Your score is {score}.\n{str}')
+if __name__ == '__main__':
+    # add terminal args to input just in case
+    if len(sys.argv) > 1:
+        password = sys.argv[1]
+    # if not, take in user input normally
+    else:
+        password = input('Enter your password: ')
+    score, str = check_pwd(password)
+    print(f'Your score is {score}.\n{str}')
